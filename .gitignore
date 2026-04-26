@@ -1,0 +1,11 @@
+project3/artifacts/cluster_pca.png
+project3/artifacts/cluster_features.pkl
+project3/artifacts/cluster_scaler.pkl
+project3/artifacts/col_config.json
+project3/artifacts/customer_segments.csv
+project3/artifacts/eda_plots.png
+project3/artifacts/elbow_silhouette.png
+project3/artifacts/kmeans_model.pkl
+project3/artifacts/outlier_log.json
+project3/artifacts/pca_model.pkl
+project3/Dataset.csv
