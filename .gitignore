@@ -9,3 +9,6 @@ project3/artifacts/kmeans_model.pkl
 project3/artifacts/outlier_log.json
 project3/artifacts/pca_model.pkl
 project3/Dataset.csv
+plots/04_raw_boxplots.png
+plots/06_missing_after.png
+*.png
