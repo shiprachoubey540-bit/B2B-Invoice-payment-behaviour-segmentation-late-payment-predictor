@@ -1,0 +1,36 @@
+{
+  "best_model": "XGBoost",
+  "split_info": {
+    "method": "temporal",
+    "cutoff_date": "2015-12-11",
+    "train_size": 36671,
+    "test_size": 9168,
+    "train_size_smote": 49660
+  },
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.4638,
+      "precision": 0.7384,
+      "recall": 0.1029,
+      "f1_score": 0.1807,
+      "roc_auc": 0.7744
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.8652,
+      "precision": 0.9732,
+      "recall": 0.7869,
+      "f1_score": 0.8702,
+      "roc_auc": 0.9179
+    },
+    {
+      "model": "XGBoost",
+      "accuracy": 0.9443,
+      "precision": 0.9837,
+      "recall": 0.9182,
+      "f1_score": 0.9498,
+      "roc_auc": 0.9905
+    }
+  ]
+}
