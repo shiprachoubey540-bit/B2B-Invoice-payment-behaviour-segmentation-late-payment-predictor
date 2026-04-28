@@ -127,6 +127,33 @@ All models evaluated on the held-out test set using: Accuracy, Precision, Recall
 - Precision of 98.4% — almost no false alarms
 
 
+---
+
+###  SHAP Feature Importance (XGBoost)
+
+Top features driving late payment predictions:
+
+| Rank | Feature | Business Meaning |
+|------|---------|-----------------|
+| 1 | `Weekday_due.1` | Day of week the payment is due |
+| 2 | `order_volume_ratio` | Invoice size vs customer's usual volume |
+| 3 | `cust_hist_avg_overdue` | Customer's average historical overdue days |
+| 4 | `Weekday_clearnum` | Day of week the invoice was cleared |
+| 5 | `Payment_Method_description_enc` | Payment method used by customer |
+
+> **Key insight:** Customer payment history (`cust_hist_avg_overdue`, `cust_hist_late_rate`) and timing features (`Weekday_due.1`, `invoice_dayofweek`) are the strongest predictors of late payment.
+
+---
+
+###  Output Files
+
+| File | Description 
+|------|-------------
+| `models/model.pkl` | Trained XGBoost model 
+| `models/scaler.pkl` | StandardScaler fitted on training data 
+| `models/shap_explainer.pkl` | SHAP explainer for predictions 
+| `results/metrics.json` | All model evaluation metrics
+| `feature_names.pkl` | Feature list 
 
 
 
