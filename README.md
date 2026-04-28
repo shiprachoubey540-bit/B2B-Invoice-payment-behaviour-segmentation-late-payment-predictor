@@ -89,6 +89,45 @@ Train, evaluate, and select the best machine learning model to predict whether a
 - Loaded `feature_names.pkl` → 30 features selected
 - Target variable: `DelayFlag` (1 = Late, 0 = On-Time)
 
+  **2. Temporal Train-Test Split**
+- Sorted by `Doc_Date` (chronological order)
+- Train: oldest 80% → 36,671 records (up to 2015-12-11)
+- Test: most recent 20% → 9,168 records
+- ✅ No random shuffle — prevents data leakage
+
+**3. Class Imbalance Handling**
+- Applied SMOTE on training data only
+- Train set after SMOTE: 49,660 samples (balanced classes)
+- ✅ Test set untouched
+
+**4. Models Trained**
+
+| Model | Notes |
+|-------|-------|
+| Logistic Regression | Linear baseline, uses scaled features |
+| Random Forest | 200 trees, max depth 10 |
+| XGBoost | 200 estimators, learning rate 0.05 |
+
+**5. Evaluation Metrics**
+All models evaluated on the held-out test set using: Accuracy, Precision, Recall, F1-Score, ROC-AUC, and Confusion Matrix.
+
+---
+
+###  Results Summary
+
+| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|-------|----------|-----------|--------|----------|---------|
+| Logistic Regression | 0.4638 | 0.7384 | 0.1029 | 0.1807 | 0.7744 |
+| Random Forest | 0.8652 | 0.9732 | 0.7869 | 0.8702 | 0.9179 |
+| **XGBoost ✅** | **0.9443** | **0.9837** | **0.9182** | **0.9498** | **0.9905** |
+
+**🏆 Best Model: XGBoost**
+- ROC-AUC of 0.9905 — near-perfect discrimination
+- Recall of 91.8% — catches 9 out of 10 late payments
+- Precision of 98.4% — almost no false alarms
+
+
+
 
 
 
