@@ -57,3 +57,23 @@ ________________________________________
 * artifacts/feature_names.pkl — a Python list of the exact 30 feature column names in the correct order. Member 2 loads this with joblib.load() so they use exactly the same features that have been built, in the same order.
 ________________________________________
 
+
+
+# Model Training & Evaluation
+
+
+> **Input from:** Stage 1 (Preprocessing) — `invoices_clean.csv`, `feature_names.pkl`
+> **Output to:** Stage 3 (Deployment/API) — `model.pkl`, `scaler.pkl`, `shap_explainer.pkl`
+
+---
+
+###  Objective
+
+Train, evaluate, and select the best machine learning model to predict whether an invoice payment will be **late (1)** or **on-time (0)** using the pre-processed invoice data .
+
+---
+
+
+
+
+
