@@ -72,6 +72,24 @@ ________________________________________
 Train, evaluate, and select the best machine learning model to predict whether an invoice payment will be **late (1)** or **on-time (0)** using the pre-processed invoice data .
 
 ---
+---
+
+###  Input Files 
+
+| File | Description |
+|------|-------------|
+| `invoices_clean.csv` | Cleaned and preprocessed invoice dataset (45,839 rows) |
+| `feature_names.pkl` | Approved list of 30 feature columns (no leakage) |
+
+
+### Pipeline Steps
+
+**1. Data Loading**
+- Loaded `invoices_clean.csv` (45,839 invoices)
+- Loaded `feature_names.pkl` → 30 features selected
+- Target variable: `DelayFlag` (1 = Late, 0 = On-Time)
+
+
 
 
 
