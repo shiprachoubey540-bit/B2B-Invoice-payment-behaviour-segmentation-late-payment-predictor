@@ -1,3 +1,5 @@
+# Payment Behaviour Detector
+
 https://b2b-invoice-payment-behaviour-segmentation-late-payment-predic.streamlit.app
 
 Dataset: https://www.kaggle.com/datasets/sonalisingh1411/accounts-receivable-and-payment-delay-analysis?select=Dataset.csv   
