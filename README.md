@@ -157,7 +157,11 @@ Top features driving late payment predictions:
 | `results/metrics.json` | All model evaluation metrics
 | `feature_names.pkl` | Feature list 
 
+# Payment Behaviour Detector
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://b2b-invoice-payment-behaviour-segmentation-late-payment-predic.streamlit.app/)
 
+## 👤 My Contribution
+* **Nihala Thajudeen:** Engineered the 30-feature preprocessing pipeline, built the model inference engine, and deployed the application to **Streamlit Cloud** for production-ready model interaction.
 
 
 
